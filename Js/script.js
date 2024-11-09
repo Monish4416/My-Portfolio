@@ -79,6 +79,22 @@ function asideSectionTogglerBtn(){
     }
 }
 
+// Project Toggler 
+
+document.getElementById('frontend-btn').addEventListener('click', function() {
+    document.getElementById('frontend-projects').style.display = 'block';
+    document.getElementById('fullstack-projects').style.display = 'none';
+    this.classList.add('active');
+    document.getElementById('fullstack-btn').classList.remove('active');
+});
+
+document.getElementById('fullstack-btn').addEventListener('click', function() {
+    document.getElementById('fullstack-projects').style.display = 'block';
+    document.getElementById('frontend-projects').style.display = 'none';
+    this.classList.add('active');
+    document.getElementById('frontend-btn').classList.remove('active');
+});
+
 
 // loader 
 var loader = document.querySelector("#preloader");
